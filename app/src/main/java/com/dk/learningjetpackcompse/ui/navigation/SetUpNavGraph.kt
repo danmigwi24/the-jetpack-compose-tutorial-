@@ -1,4 +1,4 @@
-package com.dk.learningjetpackcompse.navigation
+package com.dk.learningjetpackcompse.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

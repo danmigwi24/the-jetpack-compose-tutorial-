@@ -1,4 +1,4 @@
-package com.dk.learningjetpackcompse.ui.theme
+package com.dk.learningjetpackcompse.theme
 
 import android.app.Activity
 import android.os.Build
@@ -64,7 +64,8 @@ fun LearningJetpackCompseTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        //typography = Typography,
+        typography = appTypography,
         content = content
     )
 }

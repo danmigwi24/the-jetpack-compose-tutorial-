@@ -1,2 +1,2 @@
-# the-jetpack-compose-tutorial-
-# the-jetpack-compose-tutorial-
+Learning Jetpack compose 
+Navigation using sealed class

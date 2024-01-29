@@ -1,4 +1,4 @@
-package com.dk.learningjetpackcompse.ui.theme
+package com.dk.learningjetpackcompse.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.dk.learningjetpackcompse
+package com.dk.learningjetpackcompse.ui
 
 
 import android.os.Bundle
@@ -42,7 +42,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.dk.learningjetpackcompse.ui.theme.LearningJetpackCompseTheme
+import com.dk.learningjetpackcompse.R
+import com.dk.learningjetpackcompse.theme.LearningJetpackCompseTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -264,7 +265,7 @@ fun LoginBySocialMedia() {
 @Preview(showBackground = true)
 @Composable
 fun LoginPreview() {
-    LearningJetpackCompseTheme {
+    com.dk.learningjetpackcompse.theme.LearningJetpackCompseTheme {
         Login()
 
     }

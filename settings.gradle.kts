@@ -12,7 +12,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "LearningJetpackCompse"
+
 include(":app")
- 
+include(":theme")

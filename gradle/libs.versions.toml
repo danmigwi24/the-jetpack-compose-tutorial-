@@ -1,0 +1,94 @@
+[versions]
+androidApplication = "8.1.3"
+converterGson = "2.9.0"
+kotlinAndroid = "1.9.0"
+kotlinJvm = "1.8.10"
+androidLibrary = "8.1.3"
+kotlinSerialization = "1.9.0"
+hilt = "2.48.1"
+kotlinCompilerExtensionVersion = "1.5.1"#"1.5.4"
+
+#libraries
+core = "1.12.0"
+ktorClientAndroid = "2.3.5"
+ktorClientContentNegotiation = "2.3.5"
+ktorClientLogging = "2.3.5"
+lifecycleRuntime = "2.7.0"
+activityCompose = "1.8.2"
+composeBom = "2024.01.00"
+composeConstraintLayout = "1.0.1"
+ktor = "2.3.5"
+dataStore = "1.0.0"
+composeNavigation = "2.7.6"
+hiltComposeNavigation = "1.1.0"
+okhttp = "4.10.0"
+protobufJavaLite = "3.25.0"
+kotlinCoroutines = "1.7.3"
+junit = "4.13.2"
+androidxJunit = "1.1.5"
+espressoCore = "3.5.1"
+googleTruth = "1.1.4"
+
+retrofit = "2.9.0"
+timber = "5.0.1"
+appcompat = "1.6.1"
+material = "1.11.0"
+
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntime" }
+
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleRuntime" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "composeConstraintLayout" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+
+androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigation" }
+#
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+#
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+
+#HILT
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+androidx-hilt-compose-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltComposeNavigation" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+
+[bundles]
+compose = [
+    "androidx-compose-ui",
+    "androidx-compose-ui-graphics",
+    "androidx-compose-ui-tooling",
+    "androidx-compose-material3",
+    "androidx-compose-navigation",
+    "androidx-compose-constraintlayout",
+    "androidx-ui-tooling"
+]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidApplication" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }
+android-library = { id = "com.android.library", version.ref = "androidLibrary" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+

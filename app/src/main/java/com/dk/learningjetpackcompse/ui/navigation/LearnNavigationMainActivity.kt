@@ -1,4 +1,4 @@
-package com.dk.learningjetpackcompse.navigation
+package com.dk.learningjetpackcompse.ui.navigation
 
 
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.dk.learningjetpackcompse.ui.theme.LearningJetpackCompseTheme
+import com.dk.learningjetpackcompse.theme.LearningJetpackCompseTheme
 
 class LearnNavigationMainActivity : ComponentActivity() {
 lateinit var navController: NavHostController
