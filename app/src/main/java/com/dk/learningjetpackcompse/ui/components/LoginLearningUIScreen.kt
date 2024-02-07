@@ -1,9 +1,5 @@
-package com.dk.learningjetpackcompse.ui
+package com.dk.learningjetpackcompse.ui.components
 
-
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -17,8 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -43,40 +37,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dk.learningjetpackcompse.R
-import com.dk.learningjetpackcompse.theme.LearningJetpackCompseTheme
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            LearningJetpackCompseTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
 
 @Composable
-fun Login() {
+fun LoginLearn() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color(android.graphics.Color.parseColor("#fffff"))),
+            //.background(color = Color(android.graphics.Color.parseColor("#ffff"))),
+            .background(color = Color.White),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
@@ -98,6 +68,14 @@ fun Login() {
             fontWeight = FontWeight.Bold,
             fontStyle = FontStyle.Italic
         )
+        Column {
+            TextFieldSView()
+            PassTextFieldSView()
+            ButtonView()
+            DoRememberPassword()
+            LoginBySocialMedia()
+        }
+
     }
 }
 @Composable
@@ -240,7 +218,13 @@ fun DoRememberPassword() {
 
 @Composable
 fun LoginBySocialMedia() {
-    Row (horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically){
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 32.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ){
         Image(painter = painterResource(id = R.drawable.google), contentDescription = "" , modifier = Modifier.padding(top = 8.dp))
         Image(painter = painterResource(id = R.drawable.twitter), contentDescription = "" , modifier = Modifier.padding(top = 8.dp))
         Image(painter = painterResource(id = R.drawable.facebook), contentDescription = "" , modifier = Modifier.padding(top = 8.dp))
@@ -266,7 +250,7 @@ fun LoginBySocialMedia() {
 @Composable
 fun LoginPreview() {
     com.dk.learningjetpackcompse.theme.LearningJetpackCompseTheme {
-        Login()
+        LoginLearn()
 
     }
 }

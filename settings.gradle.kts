@@ -18,3 +18,4 @@ rootProject.name = "LearningJetpackCompse"
 
 include(":app")
 include(":theme")
+include(":feature:auth")
